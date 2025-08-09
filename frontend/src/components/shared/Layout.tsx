@@ -1,19 +1,15 @@
-import type { Metadata } from 'next';
+'use client';
+
+import React from 'react';
 import { Inter } from 'next/font/google';
-import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  title: 'CyberShield - Educational Cybersecurity Platform',
-  description: 'AI-powered educational cybersecurity testing platform with social learning',
-};
-
-export default function RootLayout({
-  children,
-}: {
+interface LayoutProps {
   children: React.ReactNode;
-}) {
+}
+
+export default function Layout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -31,16 +27,16 @@ export default function RootLayout({
                   </span>
                 </div>
                 <nav className="flex space-x-4">
-                  <a href="/" className="text-gray-700 hover:text-gray-900">
+                  <a href="#" className="text-gray-700 hover:text-gray-900">
                     Dashboard
                   </a>
-                  <a href="/learning" className="text-gray-700 hover:text-gray-900">
+                  <a href="#" className="text-gray-700 hover:text-gray-900">
                     Learning
                   </a>
-                  <a href="/testing" className="text-gray-700 hover:text-gray-900">
+                  <a href="#" className="text-gray-700 hover:text-gray-900">
                     Testing
                   </a>
-                  <a href="/community" className="text-gray-700 hover:text-gray-900">
+                  <a href="#" className="text-gray-700 hover:text-gray-900">
                     Community
                   </a>
                 </nav>
